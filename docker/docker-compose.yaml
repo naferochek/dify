@@ -641,6 +641,7 @@ services:
     volumes:
       # Mount the storage directory to the container, for storing user files.
       - ./volumes/app/storage:/app/api/storage
+      - ./php-custom.ini:/usr/local/etc/php/conf.d/99-custom.ini
     networks:
       - ssrf_proxy_network
       - default
